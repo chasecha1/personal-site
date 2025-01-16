@@ -3,22 +3,24 @@ import { PostsProfile } from "../../../../types/entities";
 import { getPostBySlug } from "@/api/postsApi";
 import { Metadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const param_slug = await params
-  const post = await getPostBySlug(param_slug.slug);
+type PostPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   return {
     title: `${post[0].title} | Chase Cha`,
     description: `Read the article: ${post[0].title}.`,
   };
 }
 
-export default async function PostPage({ params }: { params: { slug: string }}) {
-  const param_slug = await params
-  const data: PostsProfile[] = await getPostBySlug(param_slug.slug)
+export default async function PostPage({ params }: PostPageProps) {
+  const { slug } = await params;
+  const data: PostsProfile[] = await getPostBySlug(slug)
   const post = data[0]
 
   const components = {
