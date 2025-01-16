@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the first iteration of my personal website.
 
-## Getting Started
+## Stack
+1. This is a Next.js application using the app router
+2. Sanity - uses Sanity Studio for guestbook management and blog posts
+3. Tailwind CSS - all components are styled with help from tailwind
+4. Vercel - This site is being deployed on Vercel
 
-First, run the development server:
+## Goals
+My motivation for this website was to build an interactive platform for me to share my thoughts and things I am experimenting with, primarily through the post page. I also wanted to showcase some of the work I've been doing, as seen through the project component.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Not Finished
+This site is not entirely finished. There are still a few things I want to try out and add in the future. Here are a couple features I want to add incremently:
+1. A better contact me section - I've been researching tools like Nodemailer or EmailJS in order to build a contact me component where you write and send your email message directly in the site instead of clicking a link to my email
+2. I plan on adding spam protection/word filtering to the guestbook submissions to better protect the page. I ultimately want to learn more about best practices surrounding form input such as this so will work on filtering/better checks for the submissions.
+3. Animations - I think it could be cool to experiment more with animations on the page, primarily loading animations.
+4. Video content - For projects I am not hosting anymore, I would like to provide videos so people can see walkthroughs of the project instead of just looking at the source code.
