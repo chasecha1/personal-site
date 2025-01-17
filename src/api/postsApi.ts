@@ -1,9 +1,10 @@
 import { client } from "@/sanity/lib/client"
+import { secondClient } from "@/sanity/lib/client";
 
 export async function getPosts() {
   try {
-    const data = await client.fetch(
-      `*[_type == "post"]{
+    const data = await secondClient.fetch(
+      `*[_type == "post"] | order(publishedAt desc){
           _id,
           title,
           slug,

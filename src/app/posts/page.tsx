@@ -17,7 +17,7 @@ export default async function Posts() {
           <h1 className="Heading--head pb-4">All Posts</h1>
           <ul>
             {posts.map((post) => (
-              <li key={post._id} className="flex flex-row text-sm md:text-base">
+              <li key={post._id} className="flex flex-row text-sm md:text-base mb-2">
                 <Link href={`/posts/${post.slug.current}`} className="Link--secondary">
                   <h2>{post.title}</h2>
                 </Link>

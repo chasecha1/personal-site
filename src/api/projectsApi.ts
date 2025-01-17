@@ -1,8 +1,9 @@
 import { client } from "@/sanity/lib/client"
+import { secondClient } from "@/sanity/lib/client";
 
 export async function getProjects() {
   try {
-    const data = await client.fetch(
+    const data = await secondClient.fetch(
       `*[_type == "project"]{
           _id,
           title,

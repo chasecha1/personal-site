@@ -40,7 +40,6 @@ const GuestBookForm = ({onSubmission}: GuestBookFormProps) => {
 
       if (onSubmission) {
         onSubmission();
-        console.log("should be fetching")
       }
     } catch (err) {
       console.error(err);

@@ -15,7 +15,6 @@ export default function GuestBook() {
   const fetchGuestEntries = async () => {
     const data = await getGuestBook();
     setGuestEntries(data || []);
-    console.log("guest entries updated")
   };
   
   const handleFormSubmission = async () => {
