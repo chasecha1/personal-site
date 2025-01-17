@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "A personal portfolio site built with Next.js, Typescript, and Tailwind",
 };
 
+export const revalidate = 180;
+
 export default async function Home() {
   const projects = await getProjects();
 

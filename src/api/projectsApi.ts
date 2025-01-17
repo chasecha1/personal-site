@@ -3,7 +3,7 @@ import { secondClient } from "@/sanity/lib/client";
 
 export async function getProjects() {
   try {
-    const data = await secondClient.fetch(
+    const data = await client.fetch(
       `*[_type == "project"]{
           _id,
           title,

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "A page that holds all of my blog posts. Check them out to see what I've been up to!"
 };
 
+export const revalidate = 180;
+
 export default async function Posts() {
     const posts: PostsProfile[] = await getPosts();
     return (

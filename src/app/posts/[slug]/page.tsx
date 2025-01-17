@@ -18,6 +18,8 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   };
 }
 
+export const revalidate = 180;
+
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = await params;
   const data: PostsProfile[] = await getPostBySlug(slug)
