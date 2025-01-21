@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="Hero-description flex flex-col lg:w-2/3 px-12 lg:px-20">
               <h1 className="text-navy-text dark:text-white Heading--head pb-4 lg:pb-0">Hi! I'm Chase.</h1>
               <div className="Heading--sub text-base lg:text-desc text-navy-text dark:text-white">
-                I'm currently a third year at UVA studying Computer Science. I'm into weightlifing, playing guitar, and like to code (obviously). Thanks for stopping by my site! Feel free to check out my blog posts (I'm trying to upload a new one every so often), and leave a message in the guestbook!
+                <p className="Hero-description">I'm currently a third year at UVA studying Computer Science. I'm into weightlifing, playing guitar, and like to code! Thanks for stopping by my site! Feel free to check out my blog posts since I'm trying to upload a new one every so often, and leave a message in the guestbook!</p>
               </div>
             </div>
             <div className="Nav-buttons flex flex-col pt-10 lg:pt-0 lg:w-1/3 px-10 lg:pr-20">
