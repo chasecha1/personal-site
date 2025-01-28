@@ -27,7 +27,7 @@ const ContactMe = () => {
             <a href="https://github.com/chasecha1" className="Link--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
           <div className="Resume pt-2">
-            <a href="/resume.pdf" className="Link--secondary" target="_blank" rel="noopener noreferrer">View my Resume</a>
+            <a href="/Chase_Cha_resume.pdf" className="Link--secondary" target="_blank" rel="noopener noreferrer">View my Resume</a>
           </div>
         </div>
 
