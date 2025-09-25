@@ -29,13 +29,18 @@ const GuestBookForm = ({onSubmission}: GuestBookFormProps) => {
     setIsSubmitting(true);
 
     try {
-      await client.create({
-        _type: 'guestBookEntry',
-        ...formData,
-        date: new Date().toISOString(),
+      const res = await fetch("/api/guestbook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      alert('Entry added successfully!');
-      setFormData({ name: '', message: '' });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit entry");
+      }
+
+      alert("Entry added successfully!");
+      setFormData({ name: "", message: "" });
       setIsModalOpen(false);
 
       if (onSubmission) {
@@ -43,7 +48,7 @@ const GuestBookForm = ({onSubmission}: GuestBookFormProps) => {
       }
     } catch (err) {
       console.error(err);
-      alert('Failed to add entry.');
+      alert("Failed to add entry.");
     } finally {
       setIsSubmitting(false);
     }
